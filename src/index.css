@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-offwhite: #F5F5F0;
+  --color-orange-accent: #F97316;
+}
+
+@layer base {
+  body {
+    @apply bg-offwhite text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-black/5 rounded-2xl p-6 shadow-sm;
+  }
+  
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 cursor-pointer hover:bg-black/5;
+  }
+  
+  .nav-item.active {
+    @apply bg-orange-accent/10 text-orange-accent border border-orange-accent/20 font-semibold;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
